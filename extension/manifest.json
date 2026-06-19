@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "SII Scrapper - Diagnostico Tributario",
+  "version": "1.0.0",
+  "description": "Extrae y analiza datos del SII de Chile. Detecta fugas de dinero, pagos duplicados e inconsistencias contables.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://*.sii.cl/*",
+    "http://localhost:3000/*",
+    "https://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "src/background/worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.sii.cl/*"],
+      "js": ["src/content/main.js"],
+      "css": ["src/sidebar/styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "public/icon-16.png",
+      "48": "public/icon-48.png",
+      "128": "public/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "public/icon-16.png",
+    "48": "public/icon-48.png",
+    "128": "public/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/sidebar/*", "public/*"],
+      "matches": ["https://*.sii.cl/*"]
+    }
+  ]
+}

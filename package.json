@@ -1,0 +1,12 @@
+{
+  "name": "sii-scrapper",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev:dashboard": "cd dashboard && npm run dev",
+    "build:dashboard": "cd dashboard && npm run build",
+    "build:extension": "cd extension && npm run build",
+    "lint": "cd dashboard && npm run lint",
+    "dev:ml": "cd ml-engine && python -m uvicorn api.main:app --reload --port 8001"
+  }
+}

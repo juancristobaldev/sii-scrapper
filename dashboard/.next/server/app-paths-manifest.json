@@ -1,0 +1,11 @@
+{
+  "/api/sessions/route": "app/api/sessions/route.js",
+  "/api/auth/login/route": "app/api/auth/login/route.js",
+  "/api/alerts-api/route": "app/api/alerts-api/route.js",
+  "/(dashboard)/page": "app/(dashboard)/page.js",
+  "/(dashboard)/sii-browser/page": "app/(dashboard)/sii-browser/page.js",
+  "/(dashboard)/auditoria/page": "app/(dashboard)/auditoria/page.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(dashboard)/analysis/page": "app/(dashboard)/analysis/page.js",
+  "/(dashboard)/upload/page": "app/(dashboard)/upload/page.js"
+}

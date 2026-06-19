@@ -1,0 +1,11 @@
+#sii-scrapper-toggle:hover {
+  background: #1e40af !important;
+}
+
+.sii-extract-btn:active {
+  transform: scale(0.98);
+}
+
+#sii-scrapper-panel button {
+  font-family: system-ui, sans-serif;
+}
